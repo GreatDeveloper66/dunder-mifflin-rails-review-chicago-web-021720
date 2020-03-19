@@ -3,6 +3,8 @@
 <p>Breed: <%= @dog.breed %></p>
 <p>Age: <%= @dog.age %></p>
 <h1>Dog's Employees</h1>
+<!-- Great job iterating through the associated collection! 
+I think the employee name might read better on one line as opposed to two.-->
 <% @dog.employees.each do |e| %>
   <%= <p>e.first_name</p> %>
   <%= <p>e.last_name</p> %>
