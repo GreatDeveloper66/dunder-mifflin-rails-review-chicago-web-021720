@@ -1,3 +1,6 @@
+<!-- The Layouts and Partials labs cover how you could reuse this form in both new and edit.
+I think that would be DRYer -->
+
 <%= form_for @employee do |f| %>
   <%= f.label :first_name %>
   <%= f.text_field :first_name %>
@@ -9,6 +12,7 @@
   <%= f.text_field :title %>
   <%= f.label "Office" %>
   <%= f.text_field :office %>
+  <!-- instead of 'dog_was', I'd say 'dog_id' here, once your migrations/schema support that attribute on an Employee. -->
   <%= f.collection_select('dog_was',@dogs,'id','name') %>
   <%= f.submit %>
 <% end %>
